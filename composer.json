@@ -20,8 +20,8 @@
         "shopware-plugin-class": "Topdata\\TopdataDemoshopSwitcherSW6\\TopdataDemoshopSwitcherSW6",
         "plugin-icon": "src/Resources/config/icon-topdata-demoshop-switcher-sw6-256x256.png",
         "label": {
-            "de-DE": "Topdata DemoshopSwitcher",
-            "en-GB": "Topdata DemoshopSwitcher"
+            "de-DE": "Topdata Demoshop Switcher",
+            "en-GB": "Topdata Demoshop Switcher"
         },
         "description": {
             "de-DE": "Toggle Buttons zum Wechseln zwischen verschiedenen Demoshops.",

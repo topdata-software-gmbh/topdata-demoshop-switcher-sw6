@@ -6,7 +6,9 @@
 
     <services>
 
-
+        <service id="Topdata\TopdataDemoshopSwitcherSW6\Subscriber\MyEventSubscriber">
+            <tag name="kernel.event_subscriber"/>
+        </service>
 
     </services>
 
