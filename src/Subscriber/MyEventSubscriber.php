@@ -65,8 +65,8 @@ class MyEventSubscriber implements EventSubscriberInterface
             $domains[] = [
                 'name'   => $fqdn,
                 'label'  => $label,
-                'active' => $currentUrlParsed['host'] === $fqdn,
                 'href'   => $this->_getNewUrl($currentUrlParsed, $fqdn),
+                'active' => $currentUrlParsed['host'] === $fqdn,
             ];
 
         }
