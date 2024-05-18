@@ -2,6 +2,7 @@
 
 namespace Topdata\TopdataDemoshopSwitcherSW6\Subscriber;
 
+use Shopware\Core\System\SystemConfig\SystemConfigService;
 use Shopware\Storefront\Page\GenericPageLoadedEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use WhyooOs\Util\UtilDebug;
@@ -13,6 +14,14 @@ use WhyooOs\Util\UtilDebug;
 class MyEventSubscriber implements EventSubscriberInterface
 {
 
+    private SystemConfigService $systemConfigService;
+
+    public function __construct(SystemConfigService $systemConfigService)
+    {
+        $this->systemConfigService = $systemConfigService;
+    }
+
+
     public static function getSubscribedEvents(): array
     {
         return [
@@ -23,13 +32,17 @@ class MyEventSubscriber implements EventSubscriberInterface
 
     public function onGenericPageLoadedEvent(GenericPageLoadedEvent $event): void
     {
-        // TODO: get the domains from plugin config
-        $domainNames = [
-            'sw64.docker|6.4',
-            'sw65.docker|6.5',
-            'sw66.docker|6.6',
-            // 'sw67.docker',
-        ];
+        $strDomains = $this->systemConfigService->get('TopdataDemoshopSwitcherSW6.config.domains');
+        if(empty($strDomains)) {
+            // fallback to default values
+            $domainNames = [
+                'sw64.docker|6.4',
+                'sw65.docker|6.5',
+                'sw66.docker|6.6',
+            ];
+        } else {
+            $domainNames = explode("\n", $strDomains);
+        }
 
         $domains = [];
         foreach ($domainNames as $domainName) {

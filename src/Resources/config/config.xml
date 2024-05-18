@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>#TopdataDemoshopSwitcherSW6# Settings</title>
+        <title lang="de-DE">#TopdataDemoshopSwitcherSW6# Einstellungen</title>
+
+        <input-field type="textarea">
+            <name>domains</name>
+            <label>Domains</label>
+            <label lang="de-DE">Domains</label>
+            <placeholder>sw64.docker|6.4
+sw65.docker|6.5
+sw66.docker|6.6
+            </placeholder>
+            <helpText>One domain per line (not URL, just the FQDN), if you want a displayName different than the domain name, use "|" to separate domain name and display name.</helpText>
+            <helpText lang="de-DE">Eine Domain pro Zeile (nicht die URL, nur den FQDN), wenn Sie einen Anzeigenamen möchten, der sich vom Domainnamen unterscheidet, verwenden Sie "|" um Domainnamen und Anzeigenamen zu trennen.</helpText>
+        </input-field>
+    </card>
+</config>

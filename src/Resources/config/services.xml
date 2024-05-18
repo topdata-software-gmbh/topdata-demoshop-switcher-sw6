@@ -6,7 +6,7 @@
 
     <services>
 
-        <service id="Topdata\TopdataDemoshopSwitcherSW6\Subscriber\MyEventSubscriber">
+        <service id="Topdata\TopdataDemoshopSwitcherSW6\Subscriber\MyEventSubscriber" autowire="true">
             <tag name="kernel.event_subscriber"/>
         </service>
 
