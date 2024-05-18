@@ -1,0 +1,30 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+{% block layout_header_top_bar %}
+    {{ parent() }}
+
+    {% block topdata_demoshop_switcher_toggle_buttons %}
+        <div style="border: 0px solid red; float: right;">
+
+            <div class="btn-group ">
+                <!-- Toggle Button 1 -->
+                <button class="btn  btn-sm btn-primary ">
+                    Toggle 1
+                </button>
+                <!-- Toggle Button 2 -->
+                <button class="btn btn-sm btn-primary ">
+                    Toggle 2
+                </button>
+                <!-- Toggle Button 3 -->
+                <button class="btn btn-sm btn-primary active">
+                    Toggle 3
+                </button>
+
+            </div>
+        </div>
+
+
+        </div>
+    {% endblock %}
+
+{% endblock %}
