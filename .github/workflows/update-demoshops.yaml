@@ -5,6 +5,7 @@ on: [push]
 
 jobs:
     update-demoshops:
+        runs-on: ubuntu-latest
         container: alpine:3.14
         steps:
             - name: Checkout code
