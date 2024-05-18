@@ -4,7 +4,7 @@ namespace Topdata\TopdataDemoshopSwitcherSW6\Subscriber;
 
 use Shopware\Storefront\Page\GenericPageLoadedEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Topdata\DemoshopSwitcherSW6\Service\DemoshopSwitcherService;
+use Topdata\TopdataDemoshopSwitcherSW6\Service\DemoshopSwitcherService;
 
 
 /**

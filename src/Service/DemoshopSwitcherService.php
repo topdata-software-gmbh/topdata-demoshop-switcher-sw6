@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Topdata\DemoshopSwitcherSW6\Service;
+namespace Topdata\TopdataDemoshopSwitcherSW6\Service;
 
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -15,9 +15,8 @@ class DemoshopSwitcherService
 
     private SystemConfigService $systemConfigService;
     private RequestStack $requestStack;
-    private DemoshopSwitcherService $demoshopSwitcherService;
 
-    public function __construct(SystemConfigService $systemConfigService, RequestStack $requestStack, DemoshopSwitcherService $demoshopSwitcherService)
+    public function __construct(SystemConfigService $systemConfigService, RequestStack $requestStack)
     {
         $this->systemConfigService = $systemConfigService;
         $this->requestStack = $requestStack;
