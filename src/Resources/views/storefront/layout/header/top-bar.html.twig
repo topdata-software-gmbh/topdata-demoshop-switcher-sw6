@@ -8,13 +8,14 @@
 
             <div class="btn-group ">
                 {% for d in page.TopdataDemoshopSwitcherSW6_domains %}
-                    <button
+                    <a
+                            href="{{ d.href }}"
                             class="btn btn-sm btn-primary
                             {% if d.active %}active{% endif %}"
                             title="{{ d.name }}"
                     >
                         {{ d.label }}
-                    </button>
+                    </a>
                 {% endfor %}
 
             </div>
