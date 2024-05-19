@@ -2,9 +2,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
     <card>
-        <title>#TopdataDemoshopSwitcherSW6# Settings</title>
-        <title lang="de-DE">#TopdataDemoshopSwitcherSW6# Einstellungen</title>
-
         <input-field type="textarea">
             <name>domains</name>
             <label>Domains</label>
