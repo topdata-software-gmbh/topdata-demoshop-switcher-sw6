@@ -31,9 +31,7 @@ class MyEventSubscriber implements EventSubscriberInterface
 
     public function onGenericPageLoadedEvent(GenericPageLoadedEvent $event): void
     {
-        $domains = $this->demoshopSwitcherService->getShopDomains();
-        // inject data into page object in twig template
-        $event->getPage()->assign(['TopdataDemoshopSwitcherSW6_shopDomains' => $domains]);
+        $event->getPage()->assign(['TopdataDemoshopSwitcherSW6_shopDomains' => $this->demoshopSwitcherService->getShopDomains()]);
     }
 
 

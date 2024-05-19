@@ -23,11 +23,10 @@ class DemoshopSwitcherService
     }
 
 
-
-
-
-
-    public function getShopDomains()
+    /**
+     * 05/2024 created
+     */
+    public function getShopDomains(): array
     {
         $strDomains = $this->systemConfigService->get('TopdataDemoshopSwitcherSW6.config.domains');
         if (empty($strDomains)) {
