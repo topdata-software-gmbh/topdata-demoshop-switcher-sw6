@@ -11,7 +11,7 @@
         </service>
 
         <!-- SERVICES -->
-        <service id="Topdata\TopdataDemoshopSwitcherSW6\Service\DemoshopSwitcherService" autowire="true" />
+        <service id="Topdata\TopdataDemoshopSwitcherSW6\Service\DemoshopSwitcherService" autowire="true" public="true"/>
 
 
     </services>

@@ -27,7 +27,7 @@ class DemoshopSwitcherService
 
 
 
-    public function getDomains()
+    public function getShopDomains()
     {
         $strDomains = $this->systemConfigService->get('TopdataDemoshopSwitcherSW6.config.domains');
         if (empty($strDomains)) {

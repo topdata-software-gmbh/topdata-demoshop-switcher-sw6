@@ -7,7 +7,7 @@
         <div style="border: 0px solid red; float: right;">
 
             <div class="btn-group ">
-                {% for d in page.TopdataDemoshopSwitcherSW6_domains %}
+                {% for d in page.TopdataDemoshopSwitcherSW6_shopDomains %}
                     <a
                             href="{{ d.href }}"
                             class="btn btn-sm btn-primary
@@ -17,8 +17,8 @@
                         {{ d.label }}
                     </a>
                 {% endfor %}
-
             </div>
+
         </div>
     {% endblock %}
 
