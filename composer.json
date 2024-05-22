@@ -1,7 +1,7 @@
 {
     "name": "topdata/topdata-demoshop-switcher-sw6",
     "description": "Toggle Buttons to switch between different Demoshops",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "authors": [
