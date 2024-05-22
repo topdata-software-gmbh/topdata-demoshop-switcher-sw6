@@ -5,6 +5,7 @@ namespace Topdata\TopdataDemoshopSwitcherSW6\Service;
 
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 use Symfony\Component\HttpFoundation\RequestStack;
+use WhyooOs\Util\UtilDebug;
 
 /**
  * 05/2024 created
@@ -43,9 +44,10 @@ class DemoshopSwitcherService
         $ret = [];
 
         // ---- analyze current url
-        $currentUrl = $this->requestStack->getMainRequest()->getUri();
-        $currentUrlParsed = parse_url($currentUrl);
-
+        $request = $this->requestStack->getMainRequest();
+        $currentUrlParsed1 = parse_url($request->getUri());
+        $currentUrlParsed2 = parse_url($_SERVER['REQUEST_URI']);
+        $currentUrlParsed = array_merge($currentUrlParsed1, $currentUrlParsed2);
 
         // ---- build data for twig
         foreach ($domainNames as $domainName) {
