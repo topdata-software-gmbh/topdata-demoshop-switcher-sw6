@@ -1,4 +1,6 @@
 # 05/2024 created
+# This workflow triggers a plugin update in the topdata shopware6 demoshops
+
 name: Update Plugin
 
 on: [push]
@@ -29,5 +31,5 @@ jobs:
 
             - name: Trigger Plugin Update on demoshops
               run: |
-                  curl -f -sS -X GET --parallel --parallel-immediate --parallel-max 8 --config urls.txt
+                  curl -f -sS -X GET --parallel --parallel-immediate --parallel-max 4 --config urls.txt
 
