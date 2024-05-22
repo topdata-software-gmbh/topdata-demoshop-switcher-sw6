@@ -46,7 +46,7 @@ class DemoshopSwitcherService
         // ---- analyze current url
         $request = $this->requestStack->getMainRequest();
         $currentUrlParsed1 = parse_url($request->getUri());
-        $currentUrlParsed2 = parse_url($_SERVER['REQUEST_URI']);
+        $currentUrlParsed2 = parse_url($_SERVER['REQUEST_URI']); // this is a workaround to get the original path before the rewrite
         $currentUrlParsed = array_merge($currentUrlParsed1, $currentUrlParsed2);
 
         // ---- build data for twig
