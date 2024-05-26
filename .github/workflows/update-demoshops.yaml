@@ -2,7 +2,6 @@
 # This workflow triggers a plugin update in the topdata shopware6 demoshops
 # The demoshop needs the topdata-plugin-manager-sw6 plugin installed
 
-
 name: Update Plugin
 
 on: [push]
@@ -10,13 +9,12 @@ on: [push]
 jobs:
     update-demoshops:
         runs-on: ubuntu-latest
-        container: alpine:3.14
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
 
             - name: Install dependencies
-              run: apk add --no-cache jq curl
+              run: sudo apt-get update && sudo apt-get install -y jq curl
 
             - name: Get Composer Name
               run: |
@@ -34,4 +32,3 @@ jobs:
             - name: Trigger Plugin Update on demoshops
               run: |
                   curl -f -sS -X GET --parallel --parallel-immediate --parallel-max 4 --config urls.txt
-
