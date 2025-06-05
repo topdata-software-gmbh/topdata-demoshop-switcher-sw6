@@ -11,37 +11,37 @@
 ## II. Code & Configuration Updates (To be performed by AI Agent)
 
 ### A. `composer.json`
-*   [ ] **File:** `composer.json`
-    *   [ ] Update `require."shopware/core"` to include `^6.7.0`.
-    *   [ ] Add/Update `require.php` to `>=8.2`.
-    *   [ ] Increment `version` to `1.1.0`.
+*   [x] **File:** `composer.json`
+    *   [x] Update `require."shopware/core"` to include `^6.7.0`.
+    *   [x] Add/Update `require.php` to `>=8.2`.
+    *   [x] Increment `version` to `1.1.0`.
 
 ### B. PHP Files Review & Potential Adjustments
 *   **Files to Review:**
     *   `src/Service/DemoshopSwitcherService.php`
     *   `src/Subscriber/MyEventSubscriber.php`
     *   `src/TopdataDemoshopSwitcherSW6.php`
-*   [ ] **PHP 8.2+ Compatibility:** Review code for any deprecated features or syntax changes. *(Anticipated: No changes needed for this plugin)*.
-*   [ ] **Shopware Core API Usage:**
-    *   [ ] Verify `SystemConfigService::get()` usage. *(Anticipated: No changes needed)*.
-    *   [ ] Verify `RequestStack` methods (`getMainRequest()`, `getUri()`) usage. *(Anticipated: No changes needed)*.
-    *   [ ] Verify `GenericPageLoadedEvent` usage (`getPage()->assign()`). *(Anticipated: No changes needed)*.
+*   [x] **PHP 8.2+ Compatibility:** Review code for any deprecated features or syntax changes. *(Anticipated: No changes needed for this plugin)*.
+*   [x] **Shopware Core API Usage:**
+    *   [x] Verify `SystemConfigService::get()` usage. *(Anticipated: No changes needed)*.
+    *   [x] Verify `RequestStack` methods (`getMainRequest()`, `getUri()`) usage. *(Anticipated: No changes needed)*.
+    *   [x] Verify `GenericPageLoadedEvent` usage (`getPage()->assign()`). *(Anticipated: No changes needed)*.
 
 ### C. Storefront Twig Template Review
 *   **File:** `src/Resources/views/storefront/layout/header/top-bar.html.twig`
-*   [ ] **Twig Syntax/Filters:** Review for deprecated Twig features. *(Anticipated: No changes needed)*.
-*   [ ] **Parent Template Compatibility:** Confirm `{% sw_extends %}` and block structure remain valid. *(Anticipated: No changes needed)*.
+*   [x] **Twig Syntax/Filters:** Review for deprecated Twig features. *(Anticipated: No changes needed)*.
+*   [x] **Parent Template Compatibility:** Confirm `{% sw_extends %}` and block structure remain valid. *(Anticipated: No changes needed)*.
 
 ### D. Configuration Files Review
 *   **Files:**
     *   `src/Resources/config/config.xml`
     *   `src/Resources/config/services.xml`
-*   [ ] **`config.xml` Schema:** Verify schema compatibility. *(Anticipated: No changes needed)*.
-*   [ ] **`services.xml` Syntax:** Verify service definition syntax. *(Anticipated: No changes needed)*.
+*   [x] **`config.xml` Schema:** Verify schema compatibility. *(Anticipated: No changes needed)*.
+*   [x] **`services.xml` Syntax:** Verify service definition syntax. *(Anticipated: No changes needed)*.
 
 ### E. Documentation Updates
 *   **File:** `CHANGELOG.md`
-    *   [ ] Add new entry for version `1.1.0` detailing Shopware 6.7 compatibility and PHP 8.2+ support.
+    *   [x] Add new entry for version `1.1.0` detailing Shopware 6.7 compatibility and PHP 8.2+ support.
 
 ## III. CI/CD Workflow Review (Separate Task - For Maintainers)
 
