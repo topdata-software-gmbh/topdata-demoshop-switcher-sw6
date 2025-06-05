@@ -1,25 +1,21 @@
 {% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
 
 {% block layout_header_top_bar %}
-    {{ parent() }}
-
-    {% block topdata_demoshop_switcher_toggle_buttons %}
-        <div style="border: 0px solid red; float: right;">
-
-            <div class="btn-group ">
-                {% for d in page.TopdataDemoshopSwitcherSW6_shopDomains %}
-                    <a
-                            href="{{ d.href }}"
-                            class="btn btn-sm btn-primary
-                            {% if d.active %}active{% endif %}"
-                            title="{{ d.name }}"
-                    >
-                        {{ d.label }}
-                    </a>
-                {% endfor %}
+    <div class="top-bar">
+        {{ parent() }}
+        {% block topdata_demoshop_switcher_toggle_buttons %}
+            <div style="float: right;">
+                <div class="btn-group">
+                    {% set shopDomains = getShopDomains() %}
+                    {% for d in shopDomains %}
+                        <a href="{{ d.href }}"
+                           class="btn btn-sm btn-primary {% if d.active %}active{% endif %}"
+                           title="{{ d.name }}">
+                            {{ d.label }}
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
-
-        </div>
-    {% endblock %}
-
+        {% endblock %}
+    </div>
 {% endblock %}

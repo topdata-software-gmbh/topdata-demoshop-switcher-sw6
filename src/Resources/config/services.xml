@@ -6,13 +6,13 @@
 
     <services>
 
-        <service id="Topdata\TopdataDemoshopSwitcherSW6\Subscriber\MyEventSubscriber" autowire="true">
-            <tag name="kernel.event_subscriber"/>
+        <service id="Topdata\TopdataDemoshopSwitcherSW6\Twig\DemoshopSwitcherTwigExtension">
+            <argument type="service" id="Topdata\TopdataDemoshopSwitcherSW6\Service\DemoshopSwitcherService"/>
+            <tag name="twig.extension"/>
         </service>
 
         <!-- SERVICES -->
         <service id="Topdata\TopdataDemoshopSwitcherSW6\Service\DemoshopSwitcherService" autowire="true" public="true"/>
-
 
     </services>
 
